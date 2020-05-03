@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Check for markdown file."""
 
+from __future__ import print_function
 import sys
 
 if __name__ == "__main__":
@@ -13,4 +14,4 @@ if __name__ == "__main__":
         print("Missing README.md", file=sys.stderr)
         exit(1)
 
-        exit(0)
+    exit(0)
