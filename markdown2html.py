@@ -4,7 +4,9 @@
 from __future__ import print_function
 import sys
 
+
 def getinput(*args):
+    """ Parse input and test."""
     myargs = args[0]
     if len(myargs) < 3:
         print("Usage: ./markdown2html.py README.md README.html",
