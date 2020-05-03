@@ -7,7 +7,7 @@ from  pathlib import Path
 
 
 # def getinput(*args):
-""" Parse input and test."""
+# """ Parse input and test."""
 # myargs = *args  #args[0]
 if __name__ == "__main__":
     if len(sys.argv) < 3:
