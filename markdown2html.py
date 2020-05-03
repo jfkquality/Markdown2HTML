@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Check for markdown file."""
+
 import sys
 
 
