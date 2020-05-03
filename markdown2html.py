@@ -14,7 +14,7 @@ def getinput(*args):
               file=sys.stderr)
         exit(1)
 
-    if myargs[1] != "README.md" or not Path("READEME.md").is_file():
+    if myargs[1] != "README.md" or not Path(myargs[1]).is_file():
         print("Missing README.md", file=sys.stderr)
         exit(1)
     exit(0)
