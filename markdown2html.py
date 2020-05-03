@@ -3,6 +3,7 @@
 
 from __future__ import print_function
 import sys
+import pathlib
 
 
 def getinput(*args):
@@ -13,7 +14,7 @@ def getinput(*args):
               file=sys.stderr)
         exit(1)
 
-    if myargs[1] != "README.md":
+    if myargs[1] != "README.md" or not pathlib.Path("READEME.md").exists():
         print("Missing README.md", file=sys.stderr)
         exit(1)
     exit(0)
