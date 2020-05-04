@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Check for markdown file."""
 
-from __future__ import print_function
 import sys
-from  pathlib import Path
 from os import path
 
 # def getinput(*args):
@@ -20,7 +18,7 @@ if __name__ == "__main__":
     if not path.exists(sys.argv[1]):
         print("Missing README.md", file=sys.stderr)
         exit(1)
-    exit(0)
+    # exit(0)
 
 
 # if __name__ == "__main__":
