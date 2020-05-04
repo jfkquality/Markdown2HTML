@@ -15,7 +15,8 @@ if __name__ == "__main__":
               file=sys.stderr)
         exit(1)
 
-    if sys.argv[1] != "README.md" or not Path(sys.argv[1]).is_file():
+    # if sys.argv[1] != "README.md" or not Path(sys.argv[1]).is_file():
+    if not Path(sys.argv[1]).is_file():
         print("Missing README.md", file=sys.stderr)
         exit(1)
     exit(0)
