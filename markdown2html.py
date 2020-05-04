@@ -14,3 +14,4 @@ if __name__ == "__main__":
     if not path.exists(argv[1]):
         print("Missing {}".format(argv[1]), file=stderr)
         exit(1)
+    exit(0)
