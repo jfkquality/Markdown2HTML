@@ -15,4 +15,20 @@ if __name__ == "__main__":
         print("Missing {}".format(argv[1]), file=stderr)
         # print("Missing README.md", file=stderr)
         exit(1)
-    exit(0)
+
+    with open(argv[1]) as f:
+        with open(argv[2], "w") as f1:
+            for line in f:
+                words = line.split() # write "<h" + len(words[0]) + ">"
+                hnum = len(words[0])
+                hopen = "<h" + str(hnum)  + ">"
+                hend = "</h" + str(hnum) + ">"
+                newline = hopen
+                for i in range(1, len(words)):
+                    newline += words[i]
+                    if i != len(words) - 1:
+                        newline += " "
+                newline += hend + "\n"
+                print(newline)
+                f1.write(newline)
+    # exit(0)
