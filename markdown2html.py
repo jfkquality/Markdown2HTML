@@ -22,13 +22,14 @@ if __name__ == "__main__":
                 if not line:
                     continue
                 words = line.split()
-                hnum = len(words[0])
-                hopen = "<h" + str(hnum) + ">"
-                hend = "</h" + str(hnum) + ">"
-                newline = hopen
-                for i in range(1, len(words)):
-                    newline += words[i]
-                    if i != len(words) - 1:
-                        newline += " "
-                newline += hend + "\n"
-                f1.write(newline)
+                if words[0][0] == "#":
+                    hnum = len(words[0])
+                    hopen = "<h" + str(hnum) + ">"
+                    hend = "</h" + str(hnum) + ">"
+                    newline = hopen
+                    for i in range(1, len(words)):
+                        newline += words[i]
+                        if i != len(words) - 1:
+                            newline += " "
+                    newline += hend + "\n"
+                    f1.write(newline)
