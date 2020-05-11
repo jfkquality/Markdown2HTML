@@ -19,6 +19,8 @@ if __name__ == "__main__":
     with open(argv[1]) as f:
         with open(argv[2], "w") as f1:
             for line in f:
+                if not line:
+                    continue
                 words = line.split()
                 hnum = len(words[0])
                 hopen = "<h" + str(hnum) + ">"
