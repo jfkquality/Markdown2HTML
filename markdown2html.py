@@ -29,5 +29,4 @@ if __name__ == "__main__":
                     if i != len(words) - 1:
                         newline += " "
                 newline += hend + "\n"
-                print(newline)
                 f1.write(newline)
