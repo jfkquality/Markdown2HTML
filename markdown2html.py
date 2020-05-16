@@ -18,12 +18,17 @@ if __name__ == "__main__":
 
     with open(argv[1]) as f:
         with open(argv[2], "w") as f1:
-            for line in f:
-                if not line:
+            for l, line in enumerate(f):
+                # print(l, line, len(line))
+                if not line or len(line) == 1:
+                    # print("not line")
                     continue
                 words = line.split()
+                # print(words[0][0])
                 if words[0][0] == "#":
                     hnum = len(words[0])
+                    if hnum > 6:
+                        continue;
                     hopen = "<h" + str(hnum) + ">"
                     hend = "</h" + str(hnum) + ">"
                     newline = hopen
